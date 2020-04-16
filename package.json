@@ -1,0 +1,14 @@
+{
+  "name": "verify-aws-sns-signature",
+  "version": "0.0.1",
+  "description": "Verifies Signature in AWS SNS HTTP POST requests",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dave Horton",
+  "license": "MIT",
+  "dependencies": {
+    "bent": "^7.3.0"
+  }
+}
