@@ -2,6 +2,7 @@ const bent = require('bent');
 const getBuffer = bent('buffer');
 const crypto = require('crypto');
 const debug = require('debug')('verify-aws-sns-signature');
+const parseUrl = require('parse-url');
 const assert = require('assert');
 
 async function validatePayload(payload) {
@@ -19,8 +20,9 @@ async function validatePayload(payload) {
   } = payload;
 
   // validate SubscribeURL
+  const url = parseUrl(SigningCertURL);
   assert.ok(/^sns\.[a-zA-Z0-9\-]{3,}\.amazonaws\.com(\.cn)?$/.test(SigningCertURL),
-    'SigningCertURL is not a valid AWS SNS URL');
+    `SigningCertURL host is not a valid AWS SNS host: ${url.resource}`);
 
   try {
     debug(`retrieving AWS certificate from ${SigningCertURL}`);
