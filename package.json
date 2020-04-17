@@ -1,6 +1,6 @@
 {
   "name": "verify-aws-sns-signature",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Verifies Signature in AWS SNS HTTP POST requests",
   "main": "app.js",
   "scripts": {

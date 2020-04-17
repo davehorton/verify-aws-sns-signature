@@ -21,8 +21,8 @@ async function validatePayload(payload) {
 
   // validate SubscribeURL
   const url = parseUrl(SigningCertURL);
-  assert.ok(/^sns\.[a-zA-Z0-9\-]{3,}\.amazonaws\.com(\.cn)?$/.test(SigningCertURL),
-    `SigningCertURL host is not a valid AWS SNS host: ${url.resource}`);
+  assert.ok(/^sns\.[a-zA-Z0-9\-]{3,}\.amazonaws\.com(\.cn)?$/.test(url.resource),
+    `SigningCertURL host is not a valid AWS SNS host: ${SigningCertURL}`);
 
   try {
     debug(`retrieving AWS certificate from ${SigningCertURL}`);
