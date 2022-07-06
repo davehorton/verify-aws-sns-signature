@@ -1,6 +1,6 @@
 {
   "name": "verify-aws-sns-signature",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Verifies Signature in AWS SNS HTTP POST requests",
   "main": "app.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "author": "Dave Horton",
   "license": "MIT",
   "dependencies": {
-    "bent": "^7.3.0",
-    "parse-url": "^5.0.1"
+    "bent": "^7.3.12",
+    "parse-url": "^7.0.2"
   }
 }
