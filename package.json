@@ -16,6 +16,6 @@
   "license": "MIT",
   "dependencies": {
     "bent": "^7.3.12",
-    "parse-url": "^7.0.2"
+    "parse-url": "^8.1.0"
   }
 }
